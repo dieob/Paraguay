@@ -2,9 +2,8 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Arsenal|Cabin+Sketch" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   <script src="/scripts/scripts.js"></script>
@@ -25,6 +24,14 @@
           <i class="fa fa-search"></i>
         </a>
       </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navSmall" class="w3-bar-block w3-gray w3-hide w3-hide-large w3-hide-medium" style ="position: absolute; z-index:2000; padding-top: 5%;width:25%; height:20%">
+      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
     </div>
     <!-- !CONTENIDO! -->
     <div ng-view></div>
