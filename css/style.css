@@ -1,3 +1,89 @@
+/*Social media icons*/
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+a {
+    text-decoration: none;
+    color: #fff;
+}
+p > a:hover{
+    color: #d9d9d9;
+    text-decoration:  underline;
+}
+ul {
+    padding:0;
+    list-style: none;
+}
+.footer-social-icons {
+    width: 350px;
+    display:block;
+    margin: 0 auto;
+}
+.social-icon {
+    color: #fff;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 250px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: black;
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: black;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-youtube {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: black;
+}
+.fa-youtube:hover {
+    background-color: #e64a41;
+}
+.fa-google-plus {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: black;
+}
+.fa-google-plus:hover {
+    background-color: #e25714;
+}
+
+
+
 /*New search wrapper*/
 input {
 	outline: none;
@@ -44,6 +130,10 @@ input[type=search]:focus {
 	box-shadow: 0 0 5px rgba(109,207,246,.5);
 }
 
+input[type="search"]:hover{
+background-color: #fff;
+}    ​
+
 
 input:-moz-placeholder {
 	color: #999;
@@ -53,11 +143,6 @@ input::-webkit-input-placeholder {
 	color: #999;
 	font-size: 100%;
 }
-
-
-
-
-
 /***********************
 * Essential Structure *
 ***********************/
@@ -75,23 +160,6 @@ input::-webkit-input-placeholder {
   padding-top: 20%;
   padding-bottom: 10%;
   padding-right: 10%;
-}
-
-.flexsearch--form {
-  background: transparent;
-  overflow: hidden;
-  position: relative;
-}
-
-.flexsearch--input-wrapper {
-  padding: 0 66px 0 0; /* Right padding for submit button width */
-  overflow: hidden;
-  background: transparent;
-}
-
-.flexsearch--input {
-  width: 100%;
-  background: transparent;
 }
 
 /***********************
