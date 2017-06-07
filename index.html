@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Siente Paraguay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fullscreen Background Image Slideshow with CSS3 - A Css-only fullscreen background image slideshow" />
+  <meta name="keywords" content="css3, css-only, fullscreen, background, slideshow, images, content" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -9,27 +15,34 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   <script src="/scripts/scripts.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script>
+  // Wait for window load
+  $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+  </script>
 </head>
 <body>
+  <div class="se-pre-con"></div>
   <div ng-app="myApp" ng-controller="controller">
     <!-- Navbar (sit on top) -->
-    <div class="w3-top w3-black w3-opacity w3-hover-opacity-off">
+    <div class="w3-top w3-center w3-black w3-opacity w3-hover-opacity-off">
       <div class="w3-bar" id="myNavbar">
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
           <i class="fa fa-bars"></i>
         </a>
-        <a href="#home" class="w3-bar-item w3-button">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-          <i class="fa fa-search"></i>
-        </a>
+        <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Inicio</a>
+        <a href="#publicar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Publica Gratis</a>
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contactanos</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-paper-plane"></i> Destinos</a>
       </div>
     </div>
 
     <!-- Navbar on small screens -->
-    <div id="navSmall" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style ="position: absolute; z-index:2000; padding-top: 5%;width:25%; height:20%">
+    <div id="navSmall" class="w3-bar-block w3-right w3-white w3-hide w3-hide-large w3-hide-medium" style ="position: absolute; z-index:2000; padding-top: 5%;width:25%; height:20%, align:right">
       <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
       <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
       <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>

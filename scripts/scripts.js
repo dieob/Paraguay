@@ -10,11 +10,8 @@ app.config(function($routeProvider) {
   .when("/home", {
     templateUrl : "templates/home.html"
   })
-  .when("/combos", {
-    templateUrl : "templates/combos.html"
-  })
-  .when("/servicios", {
-    templateUrl : "templates/servicios.html"
+  .when("/publicar", {
+    templateUrl : "templates/publicar.html"
   })
   .when("/productos", {
     templateUrl : "templates/productos.html"
