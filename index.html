@@ -25,31 +25,30 @@
   });
   </script>
 </head>
-<body>
+<body class="body-wrapper">
   <div class="se-pre-con"></div>
   <div ng-app="myApp" ng-controller="controller">
     <!-- Navbar (sit on top) -->
-    <div class="w3-top w3-center w3-black w3-opacity w3-hover-opacity-off">
+    <div class="w3-top w3-black w3-opacity w3-hover-opacity-off" >
       <div class="w3-bar" id="myNavbar">
         <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
           <i class="fa fa-bars"></i>
         </a>
         <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Inicio</a>
         <a href="#publicar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Publica Gratis</a>
-        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contactanos</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-paper-plane"></i> Destinos</a>
+        <a href="#contactar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contactanos</a>
+        <a href="#destinos" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-paper-plane"></i> Destinos</a>
       </div>
     </div>
 
     <!-- Navbar on small screens -->
-    <div id="navSmall" class="w3-bar-block w3-right w3-white w3-hide w3-hide-large w3-hide-medium" style ="position: absolute; z-index:2000; padding-top: 5%;width:25%; height:20%, align:right">
-      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-      <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <div id="navSmall" class="w3-bar-block w3-right w3-black w3-hide w3-hide-large w3-hide-medium" style ="position: absolute; z-index:2000; top:5%;width:25%; height:20%; margin-left:75%">
+      <a href="#publicar" class="w3-bar-item w3-button w3-text-white" onclick="toggleFunction()">Publicar</a>
+      <a href="#contactar" class="w3-bar-item w3-button w3-text-white" onclick="toggleFunction()">Contacto</a>
+      <a href="#destinos" class="w3-bar-item w3-button w3-text-white" onclick="toggleFunction()">Destinos</a>
     </div>
     <!-- !CONTENIDO! -->
-    <div ng-view></div>
+    <div ng-view style="margin-top:6%"></div>
 
     <!-- Footer -->
     <footer class="w3-bottom w3-center w3-black w3-opacity w3-hover-opacity-off">

@@ -1,3 +1,29 @@
+.ads-column{
+  width:25%;
+  border: 3px solid lightgray;
+  margin-top:0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  height:80%;
+  width:20%;
+  background-color:#fff;
+  position:fixed!important;
+  z-index:1;
+  overflow:auto;
+}
+
+.page-content {
+  margin-top:0;
+  margin-left:20%;
+  margin-right:20%;
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.body-wrapper{
+  background-color: white;
+}
+
 /* This only works with JavaScript,
 if it's not present, don't show loader */
 .no-js #loader { display: none;  }
