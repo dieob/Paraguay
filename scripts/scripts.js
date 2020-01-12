@@ -13,12 +13,18 @@ app.config(function($routeProvider) {
   .when("/publicar", {
     templateUrl : "templates/publicar.html"
   })
-  .when("/productos", {
-    templateUrl : "templates/productos.html"
-  })
-  .when("/promociones", {
-    templateUrl : "templates/promociones.html"
+  .when("/destinos", {
+    templateUrl : "templates/resultados.html"
   });
+});
+
+app.controller("resultsController", function($scope) {
+  $scope.records = [
+      "Alfreds Futterkiste",
+      "Berglunds snabbköp",
+      "Centro comercial Moctezuma",
+      "Ernst Handel",
+  ]
 });
 
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -30,3 +36,4 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
