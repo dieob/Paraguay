@@ -1,3 +1,14 @@
 <div ng-controller="resultsController" class="page-content w3-center">
-  <h2 ng-repeat="place in records">{{place}}</h2>
+  <div>
+    <div ng-repeat="x in records track by $index">
+      <div style="display:grid">
+          <div>
+              <img src='imagenes/akati.jpg'/ style="height: 30%; width:30%; float: left">
+              <h1>{{x.city}}</h1>
+              {{x.description}}
+          </div>
+          <hr>
+      </div>
+    </div>
+  </div>
 </div>

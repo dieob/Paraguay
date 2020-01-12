@@ -20,10 +20,8 @@ app.config(function($routeProvider) {
 
 app.controller("resultsController", function($scope) {
   $scope.records = [
-      "Alfreds Futterkiste",
-      "Berglunds snabbköp",
-      "Centro comercial Moctezuma",
-      "Ernst Handel",
+    {city: 'Encarnacion', description:'san jose beach'},
+    {city: 'CDE', description:'shopping tour'}
   ]
 });
 
