@@ -1,4 +1,4 @@
-<div id="page">
+<div id="page" ng-controller="HomeController">
   <ul class="cb-slideshow">
     <li><span>Image 01</span><div><h3>Co·no·cer</h3></div></li>
     <li><span>Image 02</span><div><h3>Re·la·jar·te</h3></div></li>
@@ -9,8 +9,8 @@
   </ul>
   <div class="flexsearch w3-center">
     <div class="flexsearch--wrapper">
-      <form>
-        <input type="search" placeholder="Buscar">
+      <form ng-submit="onSubmitGetResults()">
+        <input ng-model="searchParameter" type="search" placeholder="Buscar">
       </form>
     </div>
   </div>
