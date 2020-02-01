@@ -53,7 +53,7 @@
 
 .div_hover { background-color: white; }
 
-.div_hover:hover { background-color:whitesmoke; }
+.div_hover:hover { background-color:lightgrey; }
 
 .image-box{ 
   width: 40%; 
