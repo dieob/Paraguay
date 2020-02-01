@@ -19,14 +19,12 @@
     </div>
   </div>
   <div ng-show="noResults">
-    <h2><b>No results, but you might be interested in these options.</b></h2><br>
+    <h2 style="color: black;"><b>No results, but you might be interested in these options.</b></h2><br>
     <div class="w3-row-padding w3-padding-16 w3-center">
         <div ng-repeat="x in records track by $index" class="w3-third w3-padding-16" ng-class="{'div_hover':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
-          <div>
-              <a href="www.google.com" target="_blank">
+          <div ng-click="selectItem(x)">
                   <img src='{{x.imagePath}}'  style="width:100%; padding-top:5%">
                   <h3>{{x.city}}</h3>
-              </a>
           </div>
         </div>
     </div>
