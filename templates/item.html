@@ -1,19 +1,19 @@
 <div ng-controller="itemController" class="page-content w3-center">
         <div>
-            <div class="w3-black" style="margin-left: 10%">
+            <div class="w3-black">
                     <h1>{{selectedItem.city}}</h1>
             </div>
 
                 <div style="display:grid">
                     <div>
-                        <div class="image-box">
+                        <div class="image-box" style="padding-left: 0;">
                             <img src='{{selectedItem.imagePath}}' style = "height: 100%; width: 100%;">
                         </div>
                         <div class="map-div">
                                 <iframe ng-src="{{currentMapUrl}}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                         </div>
                     </div>
-                    <div style="display: flex; padding-top: 5%;   padding-left: 5%;">
+                    <div style="display: flex; padding-top: 5%; ">
                       <p style="text-align: justify; text-justify: inter-word;">{{selectedItem.description}}</p>
                     </div>
                     <div style="display: flex; float: right; padding-left: 5%">

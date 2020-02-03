@@ -47,12 +47,11 @@
 }
 
 .map-div{
-  width: 500px;
-  height: 250px;
   border:0;
   margin-top: 7%;
-  display:inline-block;
+  display: flex;
   float: none;
+  padding-left: 5%;
 }
 
 .hashtag{

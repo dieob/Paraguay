@@ -2,18 +2,18 @@
   <div>
     <div ng-hide="noResults" ng-repeat="x in results track by $index" ng-class="{'div_hover':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
       <div style="display:grid">
-          <div>
-            <div class="image-box">
-              <img src='{{x.imagePath}}' style = "height: 100%; width: 100%;">
-            </div>
-            <h1 style="color: black;">{{x.city}}</h1>
-              <div style="display: flex; padding-right: 5%">
-                <p style="color: black; text-align: justify; text-justify: inter-word; margin-left: 20%;">{{x.description}}</p>
+            <div ng-click="selectItem(x)">
+              <div class="image-box">
+                <img src='{{x.imagePath}}' style = "height: 100%; width: 100%;">
               </div>
-              <div style="display: flex; float: right; padding-right: 5%">
-                <p class = "hashtag"ng-repeat="hashtag in x.hashtags track by $index">#{{hashtag}}</p>
+              <h1 style="color: black;">{{x.city}}</h1>
+                <div style="display: flex; padding-right: 5%">
+                  <p style="color: black; text-align: justify; text-justify: inter-word; margin-left: 20%;">{{x.description}}</p>
+                </div>
+                <div style="display: flex; float: right; padding-right: 5%">
+                  <p class = "hashtag"ng-repeat="hashtag in x.hashtags track by $index">#{{hashtag}}</p>
+                </div>
               </div>
-          </div>
           <hr>
       </div>
     </div>
