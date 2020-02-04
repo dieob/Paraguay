@@ -12,6 +12,26 @@
   overflow:auto;
 }
 
+.topnav-search {
+  float: right;
+  padding: 6px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 16px;
+  font-size: 12px;
+}
+
+.icon-search {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 #wrapper {
   width: 500px;
   border: 1px solid black;

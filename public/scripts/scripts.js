@@ -1,6 +1,6 @@
 
 var app = angular.module('myApp', ["ngRoute"]);
-app.controller('controller', function($rootScope, $http) {
+app.controller('controller', function($rootScope, $scope, $location) {
   $rootScope.records = [
     {city: 'Encarnacion', description:'San Jose Beach is the main attraction in this city, with an extension of 700 mts is the summer destination for paraguayans.', hashtags:["beach", "summer", "outdoor"], imagePath: 'imagenes/encarnacion.jpg', mapSrc:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078187.718862392!2d-57.05642804682274!3d-26.365092069513103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945793db2496ab05%3A0xe02f58d092146b60!2sEncarnaci%C3%B3n%20itapua!5e0!3m2!1ses!2spy!4v1580583150079!5m2!1ses!2spy'},
     {city: 'Laguna Blanca', description:'Laguna Blanca is an ecological and tourist location of Paraguay that comprehends an agricultural and cattle establishment, with a lake that is settled over calcareous sand, fact that makes the water completely transparent and apt for diving.', hashtags:["summer", "ecological", "beach"], imagePath: 'imagenes/lagunablanca.jpeg', mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14601.157089067103!2d-56.2930870253813!3d-23.808310521221994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9460fe0dbc586be7%3A0x67536af6e448745c!2sLaguna%20Blanca!5e0!3m2!1ses!2spy!4v1580587822110!5m2!1ses!2spy"},
@@ -9,6 +9,32 @@ app.controller('controller', function($rootScope, $http) {
   ]
 
   $rootScope.result = [];
+
+  $scope.isActive = function(viewLocation) {
+    return viewLocation === $location.path();
+  };
+
+  //function for searching from top nav menu
+  $rootScope.results = [];
+  $rootScope.noResults = true;
+  $scope.onSubmitGetResults = function() {
+    $rootScope.records.forEach(function (item, index) {
+      //Search by city
+      if(item.city.toUpperCase() === $scope.searchBy.toUpperCase()){
+        $rootScope.results.push(item)
+      }
+      item.hashtags.forEach(function(hashtag){
+        if(hashtag.toUpperCase() === $scope.searchBy.toUpperCase()){
+          $rootScope.results.push(item)
+        }
+      })
+    });
+    if($rootScope.results.length > 0){
+      $rootScope.noResults = false;
+    }
+    $scope.searchBy = "";
+    $location.path('/resultados')
+  }
 });
 app.config(function($routeProvider) {
   $routeProvider
